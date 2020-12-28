@@ -117,6 +117,7 @@ nav h1 {
   padding-top: 50px;
   font-size: 50px;
   color: #fff;
+  line-height: 3.5rem;
 }
 
 #showcase {
@@ -126,7 +127,7 @@ nav h1 {
 
 /* Mid Sections */
 #home-info {
-  height: 400px;
+  height: 450px;
 }
 
 .info-content {
@@ -213,8 +214,9 @@ nav h1 {
 #guests-container {
   text-align: center;
   background: url("../img/test-bg.jpg") no-repeat center center/cover;
-  overflow: auto;
-  height: 600px;
+  overflow: hidden;
+  height: 100%;
+
 }
 
 #guests-container h2 {
@@ -222,6 +224,7 @@ nav h1 {
   padding-bottom: 30px;
   font-size: 40px;
   color: #fff;
+  line-height: 3rem;
 }
 
 .guest img {
@@ -262,8 +265,14 @@ nav h1 {
 #contact-form textarea {
   width: 100%;
   padding: 10px;
+  border: 1px solid #bbb;
 }
 
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
+}
 #contact-form button {
   display: block;
   margin-top: 15px;
