@@ -1,7 +1,8 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;400;700&display=swap');
 /* Generic selectors */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -22,12 +23,14 @@ li {
 }
 
 /* Page container */
+
 .container-page {
     display: flex;
     flex-direction: column;
 }
 
 /* Navbar */
+
 nav#navbar {
     position: fixed;
     width: 100vw;
@@ -37,7 +40,6 @@ nav#navbar {
     align-items: center;
     color: #eee;
     height: 60px;
-    
 }
 
 #brand {
@@ -81,6 +83,7 @@ nav#navbar {
 }
 
 /* Welcome-section */
+
 #welcome-section {
     height: 100vh;
     background-color: rgba(237, 221, 212, 0.90);
@@ -89,7 +92,7 @@ nav#navbar {
     justify-content: center;
     align-items: center;
 }
- 
+
 #welcome-section::before {
     content: "";
     display: block;
@@ -122,8 +125,12 @@ nav#navbar {
 }
 
 @keyframes welcome-links {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .icon-personal:hover {
@@ -142,6 +149,7 @@ nav#navbar {
 }
 
 /* Projects cards */
+
 #projects {
     background-color: #0e9594;
     color: #eee;
@@ -171,7 +179,6 @@ nav#navbar {
 .project-tile {
     margin: 0 20px 40px 20px;
     border-radius: 5px;
-
 }
 
 .project-tile h3 {
@@ -182,6 +189,7 @@ nav#navbar {
 }
 
 /* About */
+
 #about h2 {
     color: #127475;
 }
@@ -216,6 +224,7 @@ nav#navbar {
 }
 
 /* Media queries */
+
 @media (max-width: 768px) {
     /* Navbar */
     nav#navbar {
@@ -223,33 +232,28 @@ nav#navbar {
         flex-direction: column;
         height: auto;
     }
-
     #brand {
         width: 100%;
     }
-
     .container-links {
         flex-direction: column;
         align-items: center;
         text-align: center;
         margin: 0;
     }
-
     /* Welcome section */
     .icon-personal p {
         opacity: 1;
     }
-
     #welcome-section::before {
         height: 1000px;
     }
-
     /* Projects */
     .image-project {
         height: 200px;
     }
-
     /* About section */
     .container-about {
         flex-direction: column;
     }
+}
