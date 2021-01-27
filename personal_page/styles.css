@@ -1,0 +1,119 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;400;700&display=swap');
+
+/* Generic selectors */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Kulim Park', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+Page container
+.container-page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav#navbar {
+    position: fixed;
+    width: 100vw;
+    background-color: #0e9594;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    height: 60px;
+    
+}
+
+#brand {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0 40px;
+    background-color: #127475;
+    height: 100%;
+}
+
+.container-links {
+    display: flex;
+    margin-right: 50px;
+    height: 100%;
+    min-width: 50%;
+}
+
+.container-links li {
+    display: block;
+    color: #eee;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.container-links a {
+    display: flex;
+    height: 100%;
+    color: #eee;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container-links a:hover {
+    background-color: #127475;
+}
+
+/* Welcome-section */
+#welcome-section {
+    height: 100vh;
+    background-color: #edddd4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.container-icons {
+    display: flex;
+    padding-top: 40px;
+}
+
+.icon-personal {
+    margin: 0 20px;
+}
+
+.icon-personal:hover {
+    color: #127475;
+}
+
+/* Projects cards */
+.container-projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 30px;
+}
+
+.container-cards {
+    display: flex;
+}
