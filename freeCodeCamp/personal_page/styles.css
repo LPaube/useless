@@ -1,0 +1,259 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;400;700&display=swap');
+/* Generic selectors */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Kulim Park', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/* Page container */
+
+.container-page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+
+nav#navbar {
+    position: fixed;
+    width: 100vw;
+    background-color: #0e9594;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    height: 60px;
+}
+
+#brand {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0 40px;
+    background-color: #127475;
+    height: 100%;
+}
+
+.container-links {
+    display: flex;
+    margin-right: 50px;
+    height: 100%;
+    min-width: 50%;
+}
+
+.container-links li {
+    display: block;
+    color: #eee;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.container-links a {
+    display: flex;
+    height: 100%;
+    color: #eee;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.container-links a:hover {
+    background-color: #127475;
+}
+
+/* Welcome-section */
+
+#welcome-section {
+    height: 100vh;
+    background-color: rgba(237, 221, 212, 0.90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/bg-flowers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container-icons {
+    display: flex;
+    padding-top: 40px;
+}
+
+.icon-personal {
+    margin: 0 20px;
+    text-align: center;
+}
+
+@keyframes welcome-links {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.icon-personal:hover {
+    color: #127475;
+}
+
+.icon-personal p {
+    text-align: center;
+    opacity: 0;
+}
+
+.icon-personal:hover p {
+    animation-name: welcome-links;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Projects cards */
+
+#projects {
+    background-color: #0e9594;
+    color: #eee;
+}
+
+.h2-titles {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 30px;
+}
+
+.container-cards {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.image-project {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile {
+    margin: 0 20px 40px 20px;
+    border-radius: 5px;
+}
+
+.project-tile h3 {
+    text-align: center;
+    color: #eee;
+    font-size: 1.5rem;
+    background-color: #127475;
+}
+
+/* About */
+
+#about h2 {
+    color: #127475;
+}
+
+.container-about {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.child-about {
+    margin: 30px;
+    flex-basis: 0;
+    flex-grow: 1;
+    color: #127475;
+    line-height: 1.5rem;
+}
+
+.container-img img {
+    display: block;
+    margin: 0 auto;
+    max-height: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(237, 221, 212);
+}
+
+.container-text p {
+    background-color: rgb(237, 221, 212);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    nav#navbar {
+        position: static;
+        flex-direction: column;
+        height: auto;
+    }
+    #brand {
+        width: 100%;
+    }
+    .container-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+    /* Welcome section */
+    .icon-personal p {
+        opacity: 1;
+    }
+    #welcome-section::before {
+        height: 1000px;
+    }
+    /* Projects */
+    .image-project {
+        height: 200px;
+    }
+    /* About section */
+    .container-about {
+        flex-direction: column;
+    }
+}
